@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Find Palindromes with IIFE</title>
+</head>
+<body>
+<h1>Palindromes in an Array (IIFE)</h1>
+<div id="iife"></div>
+<script>
+// Array of strings
+let words = ["racecar", "hello", "madam", "world", "level", "test"];
+// Helper function to check if a word is a palindrome
+function isPalindrome(word) {
+return word === word.split('').reverse().join('');
+}
+// IIFE to find palindromes
+let palindromesIIFE = (function(arr) {
+return arr.filter(isPalindrome);
+})(words);
+// Display the result of the IIFE
+document.getElementById('iife').textContent = "IIFE Palindromes: " +
+palindromesIIFE.join(', ');
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sum of All Numbers with Arrow Function</title>
+</head>
+<body>
+<h1>Sum of All Numbers in an Array (Arrow Function)</h1>
+<div id="output"></div>
+<script>
+// Array of numbers
+let numbersArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// Arrow function to sum all numbers in the array
+let sumArrayArrow = arr => {
+return arr.reduce((acc, curr) => acc + curr, 0);
+};
+// Display the result using arrow function
+document.getElementById('output').textContent = "Sum of Numbers: " +
+sumArrayArrow(numbersArray);
+</script>
+</body>
+</html>

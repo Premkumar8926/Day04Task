@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Palindromes with Arrow Function</title>
+</head>
+<body>
+<h1>Palindromes in an Array (Arrow Function)</h1>
+<div id="output"></div>
+<script>
+// Array of strings
+let stringsArray = ["level", "radar", "hello", "madam", "civic"];
+// Arrow function to check if a string is a palindrome
+let isPalindrome = str => {
+str = str.toLowerCase();
+return str === str.split('').reverse().join('');
+};
+// Arrow function to find palindromes in the array
+let findPalindromesArrow = arr => {
+return arr.filter(str => isPalindrome(str));
+};
+// Display the result using arrow function
+document.getElementById('output').textContent = "Palindromes: " +
+findPalindromesArrow(stringsArray).join(', ');
+</script>
+</body>
+</html>

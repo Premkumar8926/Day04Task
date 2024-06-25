@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Print Odd Numbers with Arrow Function</title>
+</head>
+<body>
+<h1>Print Odd Numbers in an Array (Arrow Function)</h1>
+<div id="output"></div>
+<script>
+// Array of numbers
+let numbersArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// Arrow function to print odd numbers
+let printOddNumbersArrow = arr => {
+let oddNumbers = arr.filter(num => num % 2 !== 0);
+return oddNumbers.join(', ');
+};
+// Display the result using arrow function
+document.getElementById('output').textContent = "Odd Numbers: " +
+printOddNumbersArrow(numbersArray);
+</script>
+</body>
+</html>

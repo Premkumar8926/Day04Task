@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Rotate Array with Anonymous Function</title>
+</head>
+<body>
+<h1>Rotate Array by K Times (Anonymous Function)</h1>
+<div id="anonymous"></div>
+<script>
+// Array and the number of times to rotate
+let arrayToRotate = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let k = 3;
+// Anonymous function to rotate the array by k times
+let rotateArrayAnonymous = function(arr, k) {
+let len = arr.length;
+k = k % len; // In case k is greater than array length
+return arr.slice(-k).concat(arr.slice(0, len - k));
+};
+// Display the result of the anonymous function
+document.getElementById('anonymous').textContent = "Anonymous Function Rotated Array: " + rotateArrayAnonymous(arrayToRotate, k).join(', ');
+</script>
+</body>
+</html>

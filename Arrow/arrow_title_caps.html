@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Convert Strings to Title Caps with Arrow Function</title>
+</head>
+<body>
+<h1>Convert Strings to Title Caps in a String Array (Arrow Function)</h1>
+<div id="output"></div>
+<script>
+// Array of strings
+let stringArray = ["hello world", "good morning", "have a nice day"];
+// Arrow function to convert strings to title caps
+let convertToTitleCapsArrow = arr => {
+return arr.map(str => {
+return str.split(' ').map(word => {
+return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+}).join(' ');
+}).join(', ');
+};
+// Display the result using arrow function
+document.getElementById('output').textContent = "Title Caps: " +
+convertToTitleCapsArrow(stringArray);
+</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Remove Duplicates with Anonymous Function</title>
+</head>
+<body>
+<h1>Remove Duplicates from an Array (Anonymous Function)</h1>
+<div id="anonymous"></div>
+<script>
+// Array with duplicates
+let arrayWithDuplicates = [1, 2, 3, 4, 4, 5, 5, 6, 7, 8, 8, 9, 10];
+// Anonymous function to remove duplicates
+let removeDuplicatesAnonymous = function(arr) {
+return arr.filter((item, index) => arr.indexOf(item) === index);
+};
+// Display the result of the anonymous function
+document.getElementById('anonymous').textContent = "Anonymous Function Unique Array: " + removeDuplicatesAnonymous(arrayWithDuplicates).join(', ');
+</script>
+</body>
+</html>

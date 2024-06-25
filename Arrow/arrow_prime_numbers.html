@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Prime Numbers with Arrow Function</title>
+</head>
+<body>
+<h1>Prime Numbers in an Array (Arrow Function)</h1>
+<div id="output"></div>
+<script>
+// Array of numbers
+let numbersArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// Arrow function to check if a number is prime
+let isPrime = num => {
+if (num <= 1) return false;
+for (let i = 2; i <= Math.sqrt(num); i++) {
+if (num % i === 0) return false;
+}
+return true;
+};
+// Arrow function to find prime numbers in the array
+let findPrimesArrow = arr => {
+return arr.filter(num => isPrime(num));
+};
+// Display the result using arrow function
+document.getElementById('output').textContent = "Prime Numbers: " +
+findPrimesArrow(numbersArray).join(', ');
+</script>
+</body>
+</html>

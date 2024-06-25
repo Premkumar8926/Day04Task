@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title Caps Conversion</title>
+</head>
+<body>
+    <h1>Title Caps Conversion</h1>
+    <div id="title-caps-container"></div>
+
+    <script>
+        const stringArray = ["hello world", "javascript is fun", "i love coding"];
+
+        const toTitleCaps = function(arr) {
+            return arr.map(function(str) {
+                return str.split(' ').map(function(word) {
+                    return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+                }).join(' ');
+            });
+        };
+
+        const titleCapsArray = toTitleCaps(stringArray);
+        const container = document.getElementById('title-caps-container');
+        container.textContent = `Title Caps: ${titleCapsArray.join(', ')}`;
+    </script>
+</body>
+</html>
